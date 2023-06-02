@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F36-eW-3dt">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides isEnabled="YES"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU9-QO-E9f">
+                                <rect key="frame" x="79.666666666666686" y="342" width="231" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="217" id="Ih5-De-L3k"/>
+                                    <constraint firstAttribute="width" constant="231" id="YEd-5O-ghc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="sos"/>
+                                <connections>
+                                    <action selector="sosButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MWl-60-Lp3"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Jmr-4A-qvb">
+                                <rect key="frame" x="176.66666666666666" y="432" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="AKN-cw-OKD"/>
+                                    <constraint firstAttribute="height" constant="37" id="tCt-M7-RKY"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8J-bx-JUl">
+                                <rect key="frame" x="16" y="719" width="358" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="lFl-85-W9p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="p8J-bx-JUl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1Fq-mE-1t7"/>
+                            <constraint firstItem="Jmr-4A-qvb" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="3DB-Gj-2sm"/>
+                            <constraint firstItem="LU9-QO-E9f" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="9j2-Rt-Wun"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p8J-bx-JUl" secondAttribute="bottom" id="Uvf-Rb-L0R"/>
+                            <constraint firstItem="LU9-QO-E9f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vcs-cF-Sx6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p8J-bx-JUl" secondAttribute="trailing" constant="16" id="fLz-zb-d7D"/>
+                            <constraint firstItem="Jmr-4A-qvb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pfV-Vn-FH5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="00D-Ni-0JN"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Jmr-4A-qvb" id="DkM-ot-Iam"/>
+                        <outlet property="locationLabel" destination="p8J-bx-JUl" id="zCO-Ka-IR7"/>
+                        <outlet property="sosButton" destination="LU9-QO-E9f" id="bHu-Ay-loq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.92307692307691" y="-2.1327014218009479"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n7C-y0-XT3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F36-eW-3dt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dbx-1Z-xj7">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gc6-aP-QSs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cse-rV-3qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.692307692307693" y="-2.1327014218009479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sos" width="200" height="200"/>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
